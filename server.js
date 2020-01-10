@@ -18,7 +18,7 @@ app.use(serveStatic("pages", { index: false }));
 
 // Globals
 const publicFolder = "pages";
-const port = process.env.NODE_ENV === "production" ? 80 : 3000;
+const port = process.env.NODE_ENV === "production" ? process.env.PORT : 3000;
 let db;
 
 // read db on server startup
